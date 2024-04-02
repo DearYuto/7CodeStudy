@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js 유튜브 뮤직 클론 챌린지 스터디
 
-## Getting Started
+> 스터디 기간: 2024. 04. 01 ~ 2024. 04. 29
 
-First, run the development server:
+- 월요일 오후 9시 주간 미팅
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- 데일리 팀 미팅 오후 10시 30분 (약 15분간 짧게 진행)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🔥 1주 차 미션
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- [x] Next.js 14 세팅하기
+- [x] Next.js vercel github 연결 후 배포하기
 
-## Learn More
+### 🔥 2주 차 미션
 
-To learn more about Next.js, take a look at the following resources:
+- [ ] Next.js 핵심 개념 이론 공부
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  - 브라우저의 렌더링 과정을 간략히 설명해 주세요.
+  - React에서 서버 컴포넌트, 클라이언트는 언제 사용하나요?
+  - Next.js 사용하면서 SSR의 문제점이 있나요? susepnse 로 어떻게 해결할 수 있나요?
+  - Next.js 에서는 DataFetching 전략에 따라서 아래 4가지 방식으로 SSR을 구현 합니다. 그 차이점이 무엇인가요? (Streaming with Suspense, Static Data, Dynamic Data, Incremental Static Regeneration)
+  - 애니메이션 컴포넌트 라이브러리가 동작이 안 될 때 애니메이션 동작 여부는 useState로 관리를 하고 있다. SSR이후 애니메이션이 동작하지 않을 때 어떻게 해결할 수 있나요 ?
+  - CSS Position relative,absoulte CSS의 z-index 속성 이해하기 (position에 따라 z-index가 어떻게 달라지는지 규칙을 설명하세요.)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- [ ] tailwindCSS 연습하기
 
-## Deploy on Vercel
+  - [ ] 픽토그램 (신호등, 횡단보도) 코드 안보고 만들어보기
+  - [ ] PlayTailwindCSS에서 [연습 과제](https://dribbble.com/shots/23428988-Lenscraft-Photography-Website) 구현하기 (아이콘, 폰트는 제외)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [ ] ERD 다이어그램 만들기
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+  - [ ] 더미데이터로 DB Table 만들어서 lib/dummyData.js 의 Song, Channel, Playlist 관계도 파악하기
+  - 객체 이름, 어떤 필드가 있는지 정리하고 객체의 관계가 1:1, 1:N, N:M 파악하기
+  - [다이어그램 그리기 툴](https://excalidraw.com/)
+
+- [ ] (선택미션) 고도화 - MockServer 만들기
+  - [ ] 더미데이터를 내려주는 Express API 서버 만들기
