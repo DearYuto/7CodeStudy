@@ -1,3 +1,4 @@
+import Header from '@/components/elements/Header';
 import React from 'react';
 
 interface Props {
@@ -5,7 +6,11 @@ interface Props {
 }
 
 const layout = ({ children }: Props) => {
-  return <>{children}</>;
+  return (
+    <div className='w-full h-full'>
+      <Header>{children}</Header>
+    </div>
+  );
 };
 
 export default layout;
