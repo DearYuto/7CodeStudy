@@ -5,7 +5,7 @@ interface Props {
 }
 
 const layout = ({ children }: Props) => {
-  return <div>{children}</div>;
+  return <>{children}</>;
 };
 
 export default layout;
