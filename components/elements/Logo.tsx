@@ -6,8 +6,14 @@ import { useRouter } from 'next/navigation';
 import { RxHamburgerMenu } from 'react-icons/rx';
 
 import IconButton from './IconButton';
+import { IoMdClose } from 'react-icons/io';
 
-const Logo = () => {
+interface Props {
+  isInDrawer?: boolean;
+  onClickClose?: () => void;
+}
+
+const Logo = ({ onClickClose = () => {}, isInDrawer = false }: Props) => {
   const { push } = useRouter();
   const onClickLogo = () => {
     push('/');
@@ -17,7 +23,14 @@ const Logo = () => {
 
   return (
     <section className='flex items-center gap-3'>
-      <IconButton icon={<RxHamburgerMenu size={24} />} onClick={onClickIcon} />
+      {isInDrawer ? (
+        <IconButton icon={<IoMdClose size={30} />} onClick={onClickClose} />
+      ) : (
+        <IconButton
+          icon={<RxHamburgerMenu size={24} />}
+          onClick={onClickIcon}
+        />
+      )}
       <div className='cursor-pointer ' onClick={onClickLogo}>
         <Image src={'/main-logo.svg'} width={100} height={30} alt='logo' />
       </div>

@@ -1,5 +1,5 @@
 const HomePage = async () => {
-  return <main>HOME화면 </main>;
+  return <main className='min-h-[600px]'>HOME화면 </main>;
 };
 
 export default HomePage;

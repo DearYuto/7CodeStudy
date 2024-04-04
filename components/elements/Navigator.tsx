@@ -1,10 +1,11 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
 import React, { useMemo } from 'react';
+import { usePathname } from 'next/navigation';
 import { GoHome } from 'react-icons/go';
 import { FiPlus, FiMusic, FiCompass } from 'react-icons/fi';
 import Link from 'next/link';
+
 import { cn } from '@/lib/utils';
 import { dummyPlaylistArray } from './../../lib/dummyData';
 import PlaylistNav from './PlaylistNav';
