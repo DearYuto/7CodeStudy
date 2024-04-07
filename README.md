@@ -15,7 +15,7 @@
 
 ### 🔥 2주 차 미션
 
-- [ ] Next.js 핵심 개념 이론 공부
+- [x] Next.js 핵심 개념 이론 공부 - [블로그에 기록 완료](https://dearyuto.github.io/docs/category/interview)
 
   - 브라우저의 렌더링 과정을 간략히 설명해 주세요.
   - React에서 서버 컴포넌트, 클라이언트는 언제 사용하나요?
@@ -30,11 +30,14 @@
         - [완성 링크](https://play.tailwindcss.com/8zuWGjQXT7)
   - [x] PlayTailwindCSS에서 [연습 과제](https://dribbble.com/shots/23428988-Lenscraft-Photography-Website) 구현하기 (아이콘, 폰트는 제외)
         - [완성 링크](https://play.tailwindcss.com/7Ya1tLXCHv)
-- [ ] ERD 다이어그램 만들기
+- [x] ERD 다이어그램 만들기
 
-  - [ ] 더미데이터로 DB Table 만들어서 lib/dummyData.js 의 Song, Channel, Playlist 관계도 파악하기
+![image](https://github.com/DearYuto/7CodeStudy/assets/154968122/03979d4f-bfa6-4a9d-8b71-7c37ec2be9d8)
+
+**- Song 테이블의 src는 유니크하며, 변경되지 않는다고 가정하에 PK로 설정하였다.**
+
+  - [x] 더미데이터로 DB Table 만들어서 lib/dummyData.js 의 Song, Channel, Playlist 관계도 파악하기
   - 객체 이름, 어떤 필드가 있는지 정리하고 객체의 관계가 1:1, 1:N, N:M 파악하기
-  - [다이어그램 그리기 툴](https://excalidraw.com/)
 
 - [x] (선택미션) 고도화 - MockServer 만들기
-  - [x] 더미데이터를 내려주는 Express API 서버 만들기
+  - [x] 더미데이터를 내려주는 Express API 서버 만들기 - [GET API](https://github.com/DearYuto/mockserver) 하나 만들었어요.
