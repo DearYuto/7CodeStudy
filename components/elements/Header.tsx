@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import UserIcon from './UserIcon';
 import PagePadding from './PagePadding';
 
@@ -20,6 +20,7 @@ import {
 } from '@/components/ui/drawer';
 import Logo from './Logo';
 import Navigator from './Navigator';
+import { cn } from '@/lib/utils';
 
 interface Props {
   children: React.ReactNode;
@@ -48,8 +49,32 @@ interface Props {
 }
 
 const Header = ({ children }: Props) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const headRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const current = headRef.current;
+    if (!current) return;
+
+    const handleScroll = () => {
+      if (current?.scrollTop !== 0) {
+        setIsScrolled(true);
+        return;
+      }
+
+      setIsScrolled(false);
+    };
+
+    current.addEventListener('scroll', handleScroll);
+
+    return () => {
+      current.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <header className='relative overflow-y-auto w-full h-full'>
+    <header ref={headRef} className='relative overflow-y-auto w-full h-full'>
       <section className='absolute top-0 w-full'>
         <div className='relative h-[400px] w-full'>
           <Image
@@ -63,10 +88,10 @@ const Header = ({ children }: Props) => {
         </div>
       </section>
       {/* searchSection */}
-      <section className='sticky'>
+      <section className={cn('sticky top-0 left-0', isScrolled && 'bg-black')}>
         <PagePadding>
           <div className='flex justify-between items-center h-[64px]'>
-            <article className='hidden lg:flex gap-4 items-center h-[42px] min-w-[480px] bg-[rgba(0,0,0,0.14)] rounded-2xl px-[16px]'>
+            <article className='hidden lg:flex gap-4 border-neutral-500 border items-center h-[42px] min-w-[480px] bg-[rgba(0,0,0,0.14)] rounded-2xl px-[16px]'>
               <div>
                 <FiSearch size={24} />
               </div>
