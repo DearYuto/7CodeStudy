@@ -26,18 +26,40 @@
 
 - [x] tailwindCSS 연습하기
 
-  - [x] 픽토그램 (신호등, 횡단보도) 코드 안보고 만들어보기
-        - [완성 링크](https://play.tailwindcss.com/8zuWGjQXT7)
-  - [x] PlayTailwindCSS에서 [연습 과제](https://dribbble.com/shots/23428988-Lenscraft-Photography-Website) 구현하기 (아이콘, 폰트는 제외)
-        - [완성 링크](https://play.tailwindcss.com/7Ya1tLXCHv)
+  - [x] 픽토그램 (신호등, 횡단보도) 코드 안보고 만들어보기 - [완성 링크](https://play.tailwindcss.com/8zuWGjQXT7)
+  - [x] PlayTailwindCSS에서 [연습 과제](https://dribbble.com/shots/23428988-Lenscraft-Photography-Website) 구현하기 (아이콘, 폰트는 제외) - [완성 링크](https://play.tailwindcss.com/7Ya1tLXCHv)
+
 - [x] ERD 다이어그램 만들기
 
 ![image](https://github.com/DearYuto/7CodeStudy/assets/154968122/03979d4f-bfa6-4a9d-8b71-7c37ec2be9d8)
 
 **- Song 테이블의 src는 유니크하며, 변경되지 않는다고 가정하에 PK로 설정하였다.**
 
-  - [x] 더미데이터로 DB Table 만들어서 lib/dummyData.js 의 Song, Channel, Playlist 관계도 파악하기
-  - 객체 이름, 어떤 필드가 있는지 정리하고 객체의 관계가 1:1, 1:N, N:M 파악하기
+- [x] 더미데이터로 DB Table 만들어서 lib/dummyData.js 의 Song, Channel, Playlist 관계도 파악하기
+- 객체 이름, 어떤 필드가 있는지 정리하고 객체의 관계가 1:1, 1:N, N:M 파악하기
 
 - [x] (선택미션) 고도화 - MockServer 만들기
   - [x] 더미데이터를 내려주는 Express API 서버 만들기 - [GET API](https://github.com/DearYuto/mockserver) 하나 만들었어요.
+
+### 🔥 3주 차 미션
+
+- [ ] 리팩토링 - 스크롤 이벤트에 디바운싱 걸기
+      디바운싱을 사용해 스크롤 이벤트 성능 최적화 진행하기
+
+  - 스로틀링과 디바운싱 차이점 기록하기
+
+- [ ] 언제 전역상태를 써야하는지, contextAPI로만 상태관리를 하면 어떻게 되는지 특징 확인하기
+
+- [ ] Zustand 상태관리의 내부 동작에 대해 이해하기
+
+  - Context Provider를 사용하지 않아도 되는 이유
+  - Redux, Recoil과의 차이점
+
+- [ ] Route 설정은 서버에서 가능하지만, 클라이언트에서도 할 수 있는데 클라이언트 컴포넌트에서 Route를 바꾸는 방법이 무엇이 있을까?
+
+  - 꼭 서버로직에서 리다이렉트를 해야하는 경우는 언제인지
+  - 각각 어떤 이름의 함수를 사용해야 하는지
+
+- [ ] useEffect 함수를 사용해 클라이언트 렌더링을 처리하여 배경을 변경하지 않고 서버 컴포넌트로 처리한 후 개선하는 방법의 계획을 작성하기
+
+  - 서버 컴포넌트에서 처리를 시키고, 캐싱하는 방법으로 개선 고려하기
