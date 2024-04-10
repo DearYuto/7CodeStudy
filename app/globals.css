@@ -37,6 +37,10 @@ body {
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+
+    /* 다크모드 강제 적용 */
+    --background: 0 0% 0%;
+    --foreground: 210 40% 98%;
   }
 
   .dark {
