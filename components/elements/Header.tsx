@@ -22,6 +22,7 @@ import Logo from './Logo';
 import Navigator from './Navigator';
 import { cn } from '@/lib/utils';
 import useScroll from '@/hooks/scroll/useScroll';
+import useUIState from '@/hooks/zustand/useUIState';
 
 interface Props {
   children: React.ReactNode;
@@ -52,6 +53,8 @@ interface Props {
 const Header = ({ children }: Props) => {
   const { headRef, isScrolled } = useScroll();
 
+  const { headerImageSrc } = useUIState();
+
   return (
     <header ref={headRef} className='relative overflow-y-auto w-full h-full'>
       <section className='absolute top-0 w-full'>
@@ -60,7 +63,10 @@ const Header = ({ children }: Props) => {
             className='object-cover'
             fill
             alt='bg'
-            src='https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?q=80&w=1173&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+            src={
+              headerImageSrc ||
+              'https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?q=80&w=1173&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+            }
           />
           <div className='absolute top-0 bg-black opacity-40 w-full h-full'></div>
           <div className='absolute top-0 bg-gradient-to-t from-black w-full h-full'></div>
