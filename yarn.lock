@@ -528,7 +528,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@radix-ui/react-slot@npm:1.0.2":
+"@radix-ui/react-slot@npm:1.0.2, @radix-ui/react-slot@npm:^1.0.2":
   version: 1.0.2
   resolution: "@radix-ui/react-slot@npm:1.0.2"
   dependencies:
@@ -1449,6 +1449,34 @@ __metadata:
   version: 1.4.722
   resolution: "electron-to-chromium@npm:1.4.722"
   checksum: 10c0/6f1ebe00b6d8a4d122ee364dbf6c03772b9e141eac8a9456ee28a49e5b168ee64c0bb2608b90284a158f46caf912335360c5adbfd0e77271aff4e73279f34b84
+  languageName: node
+  linkType: hard
+
+"embla-carousel-react@npm:^8.0.1":
+  version: 8.0.1
+  resolution: "embla-carousel-react@npm:8.0.1"
+  dependencies:
+    embla-carousel: "npm:8.0.1"
+    embla-carousel-reactive-utils: "npm:8.0.1"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.1 || ^18.0.0
+  checksum: 10c0/a16af76be911133f00ff38491b0ed12f09571949234b22bfe83cbd2d8b0d3cf43b666ffc4fc6aaf17e04691495fdad69fc1bc33db3eeec9ba7f67fe8db056a25
+  languageName: node
+  linkType: hard
+
+"embla-carousel-reactive-utils@npm:8.0.1":
+  version: 8.0.1
+  resolution: "embla-carousel-reactive-utils@npm:8.0.1"
+  peerDependencies:
+    embla-carousel: 8.0.1
+  checksum: 10c0/c511dbbcd869f11f102e826aea600f1668f8097792b4e185678f44240466fe6a224b68833c408bd9eb6c9b26e40321b6f18f70f45bd19df3cd403d964e1fba95
+  languageName: node
+  linkType: hard
+
+"embla-carousel@npm:8.0.1":
+  version: 8.0.1
+  resolution: "embla-carousel@npm:8.0.1"
+  checksum: 10c0/9ce30759a77e75ff4ce490102c429794fd46f03bbcc4a6af4ecefbe55a5de5289b7ac0f7607d1774a9b23c241d5781bf3d45459590768b15679a9da5b56ef6df
   languageName: node
   linkType: hard
 
@@ -3185,12 +3213,14 @@ __metadata:
   dependencies:
     "@radix-ui/react-avatar": "npm:^1.0.4"
     "@radix-ui/react-dialog": "npm:^1.0.5"
+    "@radix-ui/react-slot": "npm:^1.0.2"
     "@types/node": "npm:^20"
     "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"
     autoprefixer: "npm:^10.0.1"
     class-variance-authority: "npm:^0.7.0"
     clsx: "npm:^2.1.0"
+    embla-carousel-react: "npm:^8.0.1"
     eslint: "npm:^8"
     eslint-config-next: "npm:14.1.0"
     lucide-react: "npm:^0.363.0"
