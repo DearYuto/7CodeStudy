@@ -21,6 +21,7 @@ import {
 import Logo from './Logo';
 import Navigator from './Navigator';
 import { cn } from '@/lib/utils';
+import useScroll from '@/hooks/scroll/useScroll';
 
 interface Props {
   children: React.ReactNode;
@@ -49,29 +50,7 @@ interface Props {
 }
 
 const Header = ({ children }: Props) => {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  const headRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const current = headRef.current;
-    if (!current) return;
-
-    const handleScroll = () => {
-      if (current?.scrollTop !== 0) {
-        setIsScrolled(true);
-        return;
-      }
-
-      setIsScrolled(false);
-    };
-
-    current.addEventListener('scroll', handleScroll);
-
-    return () => {
-      current.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  const { headRef, isScrolled } = useScroll();
 
   return (
     <header ref={headRef} className='relative overflow-y-auto w-full h-full'>
