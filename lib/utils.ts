@@ -13,3 +13,9 @@ export const getRandomInt = (min: number, max: number) => {
 
   return Math.floor(Math.random() * (maxNum - minNum + 1) + minNum);
 };
+
+export const getRandomElementFromArray = (arr: unknown[]) => {
+  const len = arr.length;
+
+  return arr[getRandomInt(0, len - 1)];
+};
