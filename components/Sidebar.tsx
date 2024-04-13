@@ -9,7 +9,7 @@ interface Props {
 const Sidebar = ({ children }: Props) => {
   return (
     <div className='flex h-full'>
-      <nav className='hidden lg:block w-[240px] border-r-[1px] border-neutral-600'>
+      <nav className='hidden lg:block min-w-[240px] border-r-[1px] border-neutral-600'>
         <div className='p-[24px]'>
           <Logo />
         </div>
@@ -17,7 +17,7 @@ const Sidebar = ({ children }: Props) => {
           <Navigator />
         </div>
       </nav>
-      <div className='flex-1'>{children}</div>
+      <div className='w-full lg:w-[calc(100%-240px)]'>{children}</div>
     </div>
   );
 };
