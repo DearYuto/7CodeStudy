@@ -2,7 +2,7 @@ import React from 'react';
 
 interface Props {
   icon: React.ReactNode;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 const IconButton = ({ icon, onClick }: Props) => {

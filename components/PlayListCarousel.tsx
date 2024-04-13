@@ -49,7 +49,7 @@ const PlayListCarousel = ({
           {playlistArray?.map((playlist) => {
             return (
               <CarouselItem
-                className='md:basis-1/2 lg:basis-1/3'
+                className='basis-1/2 md:basis-1/3 lg:basis-1/4'
                 key={playlist.id}
               >
                 <PlayListCard playlist={playlist} />
