@@ -22,12 +22,16 @@ export const getRandomElementFromArray = (arr: unknown[]) => {
 };
 
 export const chunkArray = (arr: unknown[], chunkSize: number) => {
-  const results: TopSong[][] = [];
+  const results: unknown[][] = [];
 
   for (let i = 0; i < arr.length; i += chunkSize) {
-    const chunk = arr.slice(i, i + chunkSize) as TopSong[];
+    const chunk = arr.slice(i, i + chunkSize);
     results.push(chunk);
   }
-  
+
   return results;
+};
+
+export const genRandomHex = () => {
+  return `#${((Math.random() * 0xffffff) << 0).toString(16).padStart(6, '0')} `;
 };
