@@ -10,7 +10,7 @@ import {
 import { chunkArray } from '@/lib/utils';
 import GenreCard from './GenreCard';
 
-interface Props {
+interface GenreListcarouselProps {
   title: string;
   subTitle?: string;
   Thumbnail?: React.ReactNode;
@@ -32,7 +32,7 @@ const GenreListCarousel = ({
   subTitle,
   Thumbnail,
   genreList,
-}: Props) => {
+}: GenreListcarouselProps) => {
   const chunkedGenreList = chunkArray(genreList as string[], 4);
 
   return (

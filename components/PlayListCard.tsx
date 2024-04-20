@@ -28,7 +28,12 @@ const PlayListCard = ({ playlist }: Props) => {
   return (
     <article className='h-[240px] cursor-pointer group'>
       <section onClick={onClickCard} className='relative h-[136px]'>
-        <Image src={imgSrc} alt='thumbnail' className='object-cover' fill />
+        <Image
+          src={imgSrc}
+          alt='thumbnail'
+          className='object-cover rounded-md'
+          fill
+        />
 
         <div className='group-hover:block hidden relative bg-gradient-to-b from-[rgba(0,0,0,0.7)] top-0 w-full h-[136px]'>
           <div className='absolute top-4 right-4'>
