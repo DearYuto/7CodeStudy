@@ -63,3 +63,48 @@
 - [ ] useEffect 함수를 사용해 클라이언트 렌더링을 처리하여 배경을 변경하지 않고 서버 컴포넌트로 처리한 후 개선하는 방법의 계획을 작성하기
 
   - 서버 컴포넌트에서 처리를 시키고, 캐싱하는 방법으로 개선 고려하기
+
+### 🔥 4주 차 미션
+
+- [ ] ref가 변할 가능성 - 다음 코드를 리팩토링 했을 때 warning이 사라지는 이유가 무엇인가요 ?
+
+```tsx
+useEffect(() => {
+  const handleScroll = () => {
+    const scrollValue = headRef.current?.scrollTop;
+    setIsScrolled(scrollValue !== 0);
+  };
+
+  headRef.current?.addEventListener('scroll', handleScroll);
+  return () => {
+    // warning message : The ref value 'headRef.current' will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by React, copy 'headRef.current' to a variable inside the effect, and use that variable in the cleanup function.eslintreact-hooks/exhaustive-deps
+    headRef.current?.removeEventListener('scroll', handleScroll);
+  };
+}, []);
+```
+
+```tsx
+useEffect(() => {
+  const currentHeadRef = headRef.current;
+
+  const handleScroll = () => {
+    const scrollValue = currentHeadRef?.scrollTop;
+    setIsScrolled(scrollValue !== 0);
+  };
+
+  currentHeadRef?.addEventListener('scroll', handleScroll);
+  return () => {
+    currentHeadRef?.removeEventListener('scroll', handleScroll);
+  };
+}, []);
+```
+
+- [ ] react 에서 map을 순회하여 컴포넌트를 렌더링 할 때 key값을 넘겨야 하는 이유가 무엇인가요? (성능 최적화, 상태 유지, 독립적인 엘리먼트와 관련하여 작성)
+
+- [ ] UI를 개발하면서 사용자 경험(UX)을 신경 쓴 사례가 있나요?
+
+- [ ] Javascript 대비 어떤점이 Typescript을 사용했을때 장점이 있었나요? 단점은 어떤 것이 있나요 ?
+
+- [ ] 불변성은 무엇이고, zustand에서 불변성 관리를 어떻게 하나요? 또, zustand는 불변성을 유지하나요 ?
+
+- [ ] ?. 과 ?? 연산자의 이름이 무엇이고, 언제 사용하는지 설명해주세요.
