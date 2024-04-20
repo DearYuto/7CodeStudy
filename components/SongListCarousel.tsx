@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Playlist, TopSong } from '@/types';
+import { TopSong } from '@/types';
 import {
   Carousel,
   CarouselContent,
@@ -61,8 +61,8 @@ const SongListCarousel = ({
         <CarouselContent>
           {chunkedTop10SongList?.map((topSongs, idx) => {
             return (
-              <CarouselItem className='basis-1 lg:basis-1/3' key={idx}>
-                <SongColumn songList={topSongs} />
+              <CarouselItem className='basis-1/2 lg:basis-1/3' key={idx}>
+                <SongColumn songList={topSongs as TopSong[]} />
               </CarouselItem>
             );
           })}

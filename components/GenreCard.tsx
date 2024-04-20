@@ -1,7 +1,11 @@
 import React from 'react';
 import { genRandomHex } from '@/lib/utils';
 
-const GenreCard = ({ genre }) => {
+interface Props {
+  genre: string;
+}
+
+const GenreCard = ({ genre }: Props) => {
   const hex = genRandomHex();
 
   return (
