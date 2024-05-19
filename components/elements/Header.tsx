@@ -1,23 +1,14 @@
 'use client';
 
 import Image from 'next/image';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import UserIcon from './UserIcon';
 import PagePadding from './PagePadding';
 
 import { FaChromecast } from 'react-icons/fa';
 import { FiSearch } from 'react-icons/fi';
 
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from '@/components/ui/drawer';
+import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui/drawer';
 import Logo from './Logo';
 import Navigator from './Navigator';
 import { cn } from '@/lib/utils';
